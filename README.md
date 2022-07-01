@@ -8,11 +8,11 @@ for lab testing.
 Please see the corresponding sections below for details.
 
 Supported SOMS:
-   colibri-imx6ull: interface-diversity-sd-sd
-   colibri-imx8x:   interface-diversity-pcie-usb
-   verdin-imx8mm:   interface-diversity-sd-sd
-   verdin-imx8mp:   interface-diversity-sd-sd
-   apalis-imx8:     interface-diversity-pcie-usb
+- colibri-imx6ull: interface-diversity-sd-sd
+- colibri-imx8x:   interface-diversity-pcie-usb
+- verdin-imx8mm:   interface-diversity-sd-sd
+- verdin-imx8mp:   interface-diversity-sd-sd
+- apalis-imx8:     interface-diversity-pcie-usb
 
 # How to install
 
