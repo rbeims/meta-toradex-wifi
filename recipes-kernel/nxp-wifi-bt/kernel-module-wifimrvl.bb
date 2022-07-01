@@ -61,19 +61,6 @@ do_nxp_driver_unpack_interface-diversity-sd-sd() {
             -xf $i
     done
 }
-#do_nxp_driver_unpack_interface-diversity-sd-sd() {
-#    tar -C ${WORKDIR}/archive.sd-sd/ -xf ${WORKDIR}/archive.sd-sd/SD-WLAN-SD-BT-8997-U16-MMC-W16.68.10.p162-16.26.10.p162-C4X16693_V4-MGPL.tar \
-#                                         SD-UAPSTA-8997-U16-MMC-W16.68.10.p162-C4X16693_V4-app-src.tgz \
-#                                         SD-UAPSTA-8997-U16-MMC-W16.68.10.p162-C4X16693_V4-mlan-src.tgz \
-#                                         SD-UAPSTA-8997-U16-MMC-W16.68.10.p162-C4X16693_V4-MGPL-src.tgz
-#    for i in SD-UAPSTA-8997-U16-MMC-W16.68.10.p162-C4X16693_V4-app-src.tgz \
-#             SD-UAPSTA-8997-U16-MMC-W16.68.10.p162-C4X16693_V4-mlan-src.tgz \
-#             SD-UAPSTA-8997-U16-MMC-W16.68.10.p162-C4X16693_V4-MGPL-src.tgz; do
-#        tar --strip-components=1 -C ${WORKDIR} \
-#            -xf ${WORKDIR}/archive.sd-sd/$i \
-#            SD-UAPSTA-BT-8997-U16-MMC-W16.68.10.p162-16.26.10.p162-C4X16693_V4-MGPL/wlan_src
-#    done
-#}
 
 SRC_URI_append_interface-diversity-usb-usb = " ${NXP_PROPRIETARY_DRIVER_LOCATION}/${NXP_PROPRIETARY_DRIVER_FILENAME};name=usb-usb-driver;subdir=archive.usb-usb "
 SRC_URI[usb-usb-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA1}"
@@ -85,21 +72,6 @@ do_nxp_driver_unpack_interface-diversity-usb-usb() {
             -xf $i
     done
 }
-#do_nxp_driver_unpack_interface-diversity-usb-usb() {
-#    tar -C ${WORKDIR}/archive.usb-usb/ -xf ${WORKDIR}/archive.usb-usb/USB-WLAN-BT-8997-U16-X86-W16.68.10.p136-16.26.10.p136-C4X16687_V4-MGPL.tar \
-#                                           USB-UAPSTA-8997-U16-X86-W16.68.10.p136-C4X16687_V4-app-src.tgz \
-#                                           USB-UAPSTA-8997-U16-X86-W16.68.10.p136-C4X16687_V4-MGPL-src.tgz \
-#                                           USB-UAPSTA-8997-U16-X86-W16.68.10.p136-C4X16687_V4-mlan-src.tgz
-#    for i in USB-UAPSTA-8997-U16-X86-W16.68.10.p136-C4X16687_V4-app-src.tgz \
-#             USB-UAPSTA-8997-U16-X86-W16.68.10.p136-C4X16687_V4-MGPL-src.tgz \
-#             USB-UAPSTA-8997-U16-X86-W16.68.10.p136-C4X16687_V4-mlan-src.tgz; do
-#        tar --strip-components=1 -C ${WORKDIR} \
-#            -xf ${WORKDIR}/archive.usb-usb/$i \
-#            USB-UAPSTA-BT-8997-U16-X86-W16.68.10.p136-16.26.10.p136-C4X16687_V4-MGPL/wlan_src
-#    done
-#}
-
-#NXP_PROPRIETARY_DRIVER_FILENAME_interface-diversity-pcie-usb = "PCIE-WLAN-USB-BT-8997-U16-X86-W16.88.10.p173-16.26.10.p173-C4X16698_V4-MGPL.zip"
 
 SRC_URI_append_interface-diversity-pcie-usb = " ${NXP_PROPRIETARY_DRIVER_LOCATION}/${NXP_PROPRIETARY_DRIVER_FILENAME};name=pcie-usb-driver;subdir=archive.pcie-usb "
 SRC_URI[pcie-usb-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA1}"
@@ -111,11 +83,4 @@ do_nxp_driver_unpack_interface-diversity-pcie-usb() {
             -xf $i
     done
 }
-#do_nxp_driver_unpack_interface-diversity-pcie-usb() {
-#    DRVNAME=$(basename ${NXP_PROPRIETARY_DRIVER_FILENAME} | sed 's/zip/tar/')
-#    tar -C ${WORKDIR}/archive.pcie-usb/ -xf ${WORKDIR}/archive.pcie-usb/$DRVNAME
-#    for i in `ls ${WORKDIR}/archive.pcie-usb/*-src.tgz`; do
-#        tar --strip-components=1 -C ${WORKDIR} \
-#            -xf $i
-#    done
-#}
+
