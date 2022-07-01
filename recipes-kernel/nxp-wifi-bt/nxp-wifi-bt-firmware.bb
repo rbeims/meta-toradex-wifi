@@ -28,8 +28,8 @@ do_nxp_driver_unpack() {
 NXP_DRIVER_PACKAGE_interface-diversity-sd-sd="${NXP_PROPRIETARY_DRIVER_FILENAME};name=sd-sd-driver"
 NXP_DRIVER_PACKAGE_interface-diversity-sd-sd_mfg-mode="${NXP_PROPRIETARY_MFG_TOOL_FILENAME};name=sd-sd-mfg-driver"
 SRC_URI_append_interface-diversity-sd-sd = " ${NXP_PROPRIETARY_DRIVER_LOCATION}/${NXP_DRIVER_PACKAGE};subdir=archive.sd-sd "
-SRC_URI[sd-sd-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA1}"
-SRC_URI[sd-sd-mfg-driver.sha256sum] = "${NXP_PROPRIETARY_MFG_TOOL_SHA1}"
+SRC_URI[sd-sd-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA256}"
+SRC_URI[sd-sd-mfg-driver.sha256sum] = "${NXP_PROPRIETARY_MFG_TOOL_SHA256}"
 do_nxp_driver_unpack_interface-diversity-sd-sd() {
     DRVNAME=$(basename ${NXP_PROPRIETARY_DRIVER_FILENAME} | sed 's/zip/tar/')
     tar -C ${S} \
@@ -45,8 +45,8 @@ do_nxp_driver_unpack_interface-diversity-sd-sd_mfg-mode() {
 NXP_DRIVER_PACKAGE_interface-diversity-usb-usb="${NXP_PROPRIETARY_DRIVER_FILENAME};name=usb-usb-driver"
 NXP_DRIVER_PACKAGE_interface-diversity-usb-usb_mfg-mode="${NXP_PROPRIETARY_MFG_TOOL_FILENAME};name=usb-usb-mfg-driver"
 SRC_URI_append_interface-diversity-usb-usb = " ${NXP_PROPRIETARY_DRIVER_LOCATION}/${NXP_DRIVER_PACKAGE};subdir=archive.usb-usb "
-SRC_URI[usb-usb-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA1}"
-SRC_URI[usb-usb-mfg-driver.sha256sum] = "${NXP_PROPRIETARY_MFG_TOOL_SHA1}"
+SRC_URI[usb-usb-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA256}"
+SRC_URI[usb-usb-mfg-driver.sha256sum] = "${NXP_PROPRIETARY_MFG_TOOL_SHA256}"
 do_nxp_driver_unpack_interface-diversity-usb-usb() {
     DRVNAME=$(basename ${NXP_PROPRIETARY_DRIVER_FILENAME} | sed 's/zip/tar/')
     tar -C ${S} \
@@ -62,8 +62,8 @@ do_nxp_driver_unpack_interface-diversity-usb-usb_mfg-mode() {
 NXP_DRIVER_PACKAGE_interface-diversity-pcie-usb="${NXP_PROPRIETARY_DRIVER_FILENAME};name=pcie-usb-driver"
 NXP_DRIVER_PACKAGE_interface-diversity-pcie-usb_mfg-mode="${NXP_PROPRIETARY_MFG_TOOL_FILENAME};name=pcie-usb-mfg-driver"
 SRC_URI_append_interface-diversity-pcie-usb = " ${NXP_PROPRIETARY_DRIVER_LOCATION}/${NXP_DRIVER_PACKAGE};subdir=archive.pcie-usb "
-SRC_URI[pcie-usb-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA1}"
-SRC_URI[pcie-usb-mfg-driver.sha256sum] = "${NXP_PROPRIETARY_MFG_TOOL_SHA1}"
+SRC_URI[pcie-usb-driver.sha256sum] = "${NXP_PROPRIETARY_DRIVER_SHA256}"
+SRC_URI[pcie-usb-mfg-driver.sha256sum] = "${NXP_PROPRIETARY_MFG_TOOL_SHA256}"
 do_nxp_driver_unpack_interface-diversity-pcie-usb() {
     DRVNAME=$(basename ${NXP_PROPRIETARY_DRIVER_FILENAME} | sed 's/zip/tar/')
     tar -C ${S} \
